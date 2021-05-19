@@ -1,0 +1,35 @@
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:none;
+    border: none;
+    text-align: center;
+}
+.search-btn {
+    background: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px 17px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    padding-right: 15px;
+}
+.search-btn:hover{
+    color: grey;
+    background: rgb(104, 2, 2);
+}
+input{
+  padding:8px;
+  border-radius: 5px;
+}
+.year-filter{
+  color: #fff;
+}
+label{
+  font-size: larger;
+}

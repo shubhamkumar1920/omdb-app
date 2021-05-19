@@ -1,0 +1,15 @@
+<div class="search-box">
+    <input [(ngModel)]="searchTitle" type="text" placeholder="Search" [value]="searchValue" (change)="url(searchTitle)"/>  
+    <button [routerLink]="searchUrl" class="search-btn">Search</button>
+    <div class="year-filter">
+        <input type="checkbox" id="year" [checked]="isFilter" (change)="handleYear($event.target.checked)" value="year">
+        <label for="year"> filter latest movie</label>
+    </div>
+</div>
+<h1 *ngIf="(isFilter) then ifBlock else elseBlock"></h1>
+<ng-template #ifBlock>
+<app-movie [moviedata]="yearList" [page]="pageChange" [totalRecords]="totalRecords" [search]="searchValue" [url]="searchUrl"></app-movie>
+</ng-template>
+<ng-template #elseBlock>
+<app-movie [moviedata]="movieList" [page]="pageChange" [totalRecords]="totalRecords" [search]="searchValue" [url]="searchUrl"></app-movie>
+</ng-template>

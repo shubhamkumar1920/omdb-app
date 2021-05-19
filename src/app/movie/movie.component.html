@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card-container" *ngFor="let movie of moviedata | paginate: {id : 'listing_pagination',itemsPerPage: 10,currentPage:page,totalItems:totalRecords}" >
+      <div class="movie-card-container">
+        <div class="movie-poster">
+          <img [src]="movie.poster" (error)=imageChange($event) alt="{{ movie.Title }}" />
+        </div>
+        <div class="movie-content-container">
+          <div class="movie-title">
+            <h3>{{ movie.title }}</h3>
+          </div>
+          <div class="movie-detail-container">
+            <div class="year-genre">
+              <p class="genre"><span>Type : </span> {{ movie.type }}</p>
+              <p class="year"><span>Release Year : </span> {{ movie.year }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<h1 *ngIf="(search=='') then ifBlock else elseBlock"></h1>
+<ng-template #ifBlock>
+  <pagination-controls id="listing_pagination" class="my-pagination" maxSize="7" directionLinks="true" (pageChange)="page=$event" [routerLink]="myEvent(page)"></pagination-controls>
+</ng-template>
+<ng-template #elseBlock>
+</ng-template>
