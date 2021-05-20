@@ -9,13 +9,15 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {MovieDataService} from './movie-data.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    MovieComponent
+    MovieComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

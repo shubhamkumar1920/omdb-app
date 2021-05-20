@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Routes,RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'search/:search/page/:page',
     component:SearchComponent
+  },
+  {
+    path:'**',
+    component:PageNotFoundComponent,
   }
 ]
 @NgModule({

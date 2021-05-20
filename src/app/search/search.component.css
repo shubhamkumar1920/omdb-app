@@ -33,3 +33,12 @@ input{
 label{
   font-size: larger;
 }
+.header-wrapper{
+  display: flex;
+  justify-content:space-around;
+} 
+h1  {
+  color: #999999 !important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 900;
+}
